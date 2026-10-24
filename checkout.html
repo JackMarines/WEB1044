@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Enter your details to complete a sample tour booking."
+    />
+    <title>Checkout – Togo</title>
+    <link rel="icon" type="image/svg+xml" href="assets/color.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Jost:wght@400;500;600;700&family=Marcellus&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261022" />
+  </head>
+  <body data-page="checkout">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Coast and Current home"
+          ><span class="brand-mark">C<span>+</span>C</span
+          ><span class="brand-name">COAST <i>&amp;</i> CURRENT</span></a
+        ><button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="menu-lines" aria-hidden="true"></span
+          ><span class="sr-only">Open navigation</span>
+        </button>
+        <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+          <a href="tours.html" data-nav="tours">Find a trip</a
+          ><a href="about.html" data-nav="about">Our way</a
+          ><a href="contact.html" data-nav="contact">Say hello</a>
+        </nav>
+        <div class="header-actions">
+          <a
+            class="header-utility"
+            href="favorites.html"
+            aria-label="Saved trips"
+            ><span class="utility-label">Saved</span
+            ><span class="count-pill" data-favorite-count>0</span></a
+          ><a class="bag-link" href="booking.html"
+            ><span>My booking</span
+            ><span class="count-pill count-pill--dark" data-cart-count
+              >0</span
+            ></a
+          ><a class="sign-in-link" href="login.html">Sign in</a>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="page-wrap interior-main">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span aria-hidden="true">/</span
+        ><a href="booking.html">My booking</a><span aria-hidden="true">/</span
+        ><span>Checkout</span>
+      </div>
+      <div class="flow-heading">
+        <div>
+          <p class="eyebrow">ONE LAST DETAIL</p>
+          <h1>Confirm your<br /><em>sample booking.</em></h1>
+        </div>
+        <p class="checkout-demo-note">
+          Coursework demo only. No payment is collected.
+        </p>
+      </div>
+      <nav class="journey-progress" id="checkout-progress" aria-label="Booking progress"><ol>
+        <li class="is-complete" data-step="1"><a href="tours.html"><span class="journey-step-marker" aria-hidden="true">01</span><span class="journey-step-copy"><span class="journey-step-label">Choose a trip</span><span class="journey-step-status" data-step-status>Complete</span></span></a></li>
+        <li class="is-complete" data-step="2"><a href="booking.html"><span class="journey-step-marker" aria-hidden="true">02</span><span class="journey-step-copy"><span class="journey-step-label">Review booking</span><span class="journey-step-status" data-step-status>Complete</span></span></a></li>
+        <li class="is-current" data-step="3" aria-current="step"><span class="journey-step-marker" aria-hidden="true">03</span><span class="journey-step-copy"><span class="journey-step-label">Contact details</span><span class="journey-step-status" data-step-status>Current</span></span></li>
+        <li class="is-upcoming" data-step="4"><span class="journey-step-marker" aria-hidden="true">04</span><span class="journey-step-copy"><span class="journey-step-label">Saved</span><span class="journey-step-status" data-step-status>Next</span></span></li>
+      </ol></nav>
+      <div class="checkout-layout">
+        <form id="checkout-form" class="form-panel form-stack" novalidate>
+          <div class="form-section-title">
+            <h2>Contact details</h2>
+            <p>These are kept only in this browser for the coursework demo.</p>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="checkout-name">Full name</label
+              ><input
+                id="checkout-name"
+                name="name"
+                autocomplete="name"
+                required
+              /><span class="field-error" data-error-for="name"></span>
+            </div>
+            <div class="field">
+              <label for="checkout-email">Email address</label
+              ><input
+                id="checkout-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              /><span class="field-error" data-error-for="email"></span>
+            </div>
+            <div class="field">
+              <label for="checkout-phone">Phone number</label
+              ><input
+                id="checkout-phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                required
+              /><span class="field-error" data-error-for="phone"></span>
+            </div>
+            <div class="field">
+              <label for="checkout-city">City or address</label
+              ><input
+                id="checkout-city"
+                name="city"
+                autocomplete="street-address"
+                required
+              /><span class="field-error" data-error-for="city"></span>
+            </div>
+            <div class="field field--wide">
+              <label for="checkout-note"
+                >Anything your host should know?
+                <span class="field-hint">Optional</span></label
+              ><textarea
+                id="checkout-note"
+                name="note"
+                rows="3"
+                maxlength="300"
+              ></textarea>
+            </div>
+          </div>
+          <fieldset class="payment-options">
+            <legend class="field-label">Choose a sample payment method</legend>
+            <label class="payment-choice"
+              ><input
+                type="radio"
+                name="payment"
+                value="Pay on arrival"
+                required
+              /><span
+                ><strong>Pay on arrival</strong
+                ><small>Example choice for the coursework flow</small></span
+              ></label
+            ><label class="payment-choice"
+              ><input type="radio" name="payment" value="Bank transfer" /><span
+                ><strong>Bank transfer</strong
+                ><small>No bank details are collected in this demo</small></span
+              ></label
+            >
+          </fieldset>
+          <p id="checkout-message" class="form-message" role="status"></p>
+          <button class="button button--coral" type="submit">
+            Confirm sample booking <span aria-hidden="true">↗</span>
+          </button>
+        </form>
+        <aside
+          id="checkout-summary"
+          class="summary-panel checkout-summary"
+          aria-label="Order summary"
+        ></aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-top page-wrap">
+        <div>
+          <a class="brand brand--footer" href="index.html"
+            ><span class="brand-mark">C<span>+</span>C</span
+            ><span class="brand-name">COAST <i>&amp;</i> CURRENT</span></a
+          >
+          <p>Good days, found by the water.</p>
+        </div>
+        <div class="footer-links">
+          <a href="tours.html">Find a trip</a><a href="about.html">Our way</a
+          ><a href="contact.html">Contact</a
+          ><a href="history.html">Booking history</a>
+        </div>
+        <a class="footer-contact" href="mailto:hello@coastandcurrent.example"
+          >hello@coastandcurrent.example <span aria-hidden="true">↗</span></a
+        >
+      </div>
+      <div class="footer-bottom page-wrap">
+        <span>Coursework demo · Example tours and prices</span
+        ><a href="#main">Back to top ↑</a>
+      </div>
+    </footer>
+    <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <script src="tour-data.js?v=20261022"></script>
+    <script src="state.js?v=20261022"></script>
+    <script src="js/shared.js?v=20261022"></script>
+    <script src="js/site.js?v=20261022"></script>
+    <script src="js/checkout.js?v=20261022"></script>
+    <script src="app.js?v=20261022"></script>
+  </body>
+</html>

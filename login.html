@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sign in to your Togo Travel coursework account."
+    />
+    <title>Login – Togo</title>
+    <link rel="icon" type="image/svg+xml" href="assets/color.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Jost:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261022" />
+  </head>
+  <body data-page="login">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" aria-label="Site header"></header>
+    <main id="main" class="page-wrap interior-main">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span aria-hidden="true">/</span
+        ><span>Login</span>
+      </div>
+      <section class="account-layout account-layout--login">
+        <div class="account-copy">
+          <p class="section-kicker">WELCOME BACK</p>
+          <h1>Let's plan your<br />next <em>journey.</em></h1>
+          <p>Sign in to see your saved tours and sample booking history.</p>
+          <span class="account-wave" aria-hidden="true">≈&nbsp; ≈&nbsp; ≈</span>
+        </div>
+        <form id="login-form" class="form-panel form-stack" novalidate>
+          <h2>Login</h2>
+          <div class="field">
+            <label for="login-email">Email address</label
+            ><input
+              id="login-email"
+              name="email"
+              type="email"
+              autocomplete="username"
+              required
+            /><span class="field-error" data-error-for="email"></span>
+          </div>
+          <div class="field">
+            <label for="login-password">Password</label
+            ><input
+              id="login-password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+            /><span class="field-error" data-error-for="password"></span>
+          </div>
+          <p id="login-message" class="form-message" role="status"></p>
+          <button class="togo-pill togo-pill--orange" type="submit">
+            Sign in <span aria-hidden="true">↗</span>
+          </button>
+          <p class="form-footnote">
+            New to Togo? <a href="register.html">Create an account</a>
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer class="site-footer"></footer>
+    <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <script src="tour-data.js?v=20261022"></script>
+    <script src="state.js?v=20261022"></script>
+    <script src="js/shared.js?v=20261022"></script>
+    <script src="js/site.js?v=20261022"></script>
+    <script src="js/account.js?v=20261022"></script>
+    <script src="app.js?v=20261022"></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Create a local demo account to try the Togo registration flow."
+    />
+    <title>Register – Togo</title>
+    <link rel="icon" type="image/svg+xml" href="assets/color.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Jost:wght@400;500;600;700&family=Marcellus&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261022" />
+  </head>
+  <body data-page="register">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Coast and Current home"
+          ><span class="brand-mark">C<span>+</span>C</span
+          ><span class="brand-name">COAST <i>&amp;</i> CURRENT</span></a
+        ><button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="menu-lines" aria-hidden="true"></span
+          ><span class="sr-only">Open navigation</span>
+        </button>
+        <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+          <a href="tours.html" data-nav="tours">Find a trip</a
+          ><a href="about.html" data-nav="about">Our way</a
+          ><a href="contact.html" data-nav="contact">Say hello</a>
+        </nav>
+        <div class="header-actions">
+          <a
+            class="header-utility"
+            href="favorites.html"
+            aria-label="Saved trips"
+            ><span class="utility-label">Saved</span
+            ><span class="count-pill" data-favorite-count>0</span></a
+          ><a class="bag-link" href="booking.html"
+            ><span>My booking</span
+            ><span class="count-pill count-pill--dark" data-cart-count
+              >0</span
+            ></a
+          ><a class="sign-in-link" href="login.html">Sign in</a>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="page-wrap interior-main">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span aria-hidden="true">/</span
+        ><span>Create account</span>
+      </div>
+      <section class="account-layout">
+        <div class="account-copy">
+          <p class="eyebrow">KEEP YOUR PLANS CLOSE</p>
+          <h1>A little space<br />for <em>what's next.</em></h1>
+          <p>
+            Create a demo account to try the sign-in interaction. Account
+            details stay in this browser for the coursework demonstration.
+          </p>
+          <span class="account-wave" aria-hidden="true">≈&nbsp; ≈&nbsp; ≈</span>
+        </div>
+        <form id="register-form" class="form-panel form-stack" novalidate>
+          <h2>Create account</h2>
+          <div class="field">
+            <label for="register-name">Full name</label
+            ><input
+              id="register-name"
+              name="name"
+              autocomplete="name"
+              required
+            /><span class="field-error" data-error-for="name"></span>
+          </div>
+          <div class="field">
+            <label for="register-email">Email address</label
+            ><input
+              id="register-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            /><span class="field-error" data-error-for="email"></span>
+          </div>
+          <div class="field">
+            <label for="register-phone">Phone number</label
+            ><input
+              id="register-phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              required
+            /><span class="field-error" data-error-for="phone"></span>
+          </div>
+          <div class="field">
+            <label for="register-password">Password</label
+            ><input
+              id="register-password"
+              name="password"
+              type="password"
+              autocomplete="new-password"
+              minlength="8"
+              required
+            /><span class="field-hint">Use at least 8 characters.</span
+            ><span class="field-error" data-error-for="password"></span>
+          </div>
+          <div class="field">
+            <label for="register-confirm">Confirm password</label
+            ><input
+              id="register-confirm"
+              name="confirm"
+              type="password"
+              autocomplete="new-password"
+              required
+            /><span class="field-error" data-error-for="confirm"></span>
+          </div>
+          <p id="register-message" class="form-message" role="status"></p>
+          <button class="button button--coral" type="submit">
+            Create demo account <span aria-hidden="true">↗</span>
+          </button>
+          <p class="form-footnote">
+            Already joined? <a href="login.html">Sign in</a>
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-top page-wrap">
+        <div>
+          <a class="brand brand--footer" href="index.html"
+            ><span class="brand-mark">C<span>+</span>C</span
+            ><span class="brand-name">COAST <i>&amp;</i> CURRENT</span></a
+          >
+          <p>Good days, found by the water.</p>
+        </div>
+        <div class="footer-links">
+          <a href="tours.html">Find a trip</a><a href="about.html">Our way</a
+          ><a href="contact.html">Contact</a
+          ><a href="history.html">Booking history</a>
+        </div>
+        <a class="footer-contact" href="mailto:hello@coastandcurrent.example"
+          >hello@coastandcurrent.example <span aria-hidden="true">↗</span></a
+        >
+      </div>
+      <div class="footer-bottom page-wrap">
+        <span>Coursework demo · Example tours and prices</span
+        ><a href="#main">Back to top ↑</a>
+      </div>
+    </footer>
+    <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <script src="tour-data.js?v=20261022"></script>
+    <script src="state.js?v=20261022"></script>
+    <script src="js/shared.js?v=20261022"></script>
+    <script src="js/site.js?v=20261022"></script>
+    <script src="js/account.js?v=20261022"></script>
+    <script src="app.js?v=20261022"></script>
+  </body>
+</html>
